@@ -1,0 +1,6 @@
+.idea/
+DesignPatterns.iml
+java/.gradle/
+java/.idea/
+java/gradle/
+python/lib/
