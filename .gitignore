@@ -4,3 +4,9 @@ java/.gradle/
 java/.idea/
 java/gradle/
 python/lib/
+
+# Python virtualenv
+python/bin/
+python/include/
+python/lib/
+python/pyvenv.cfg
