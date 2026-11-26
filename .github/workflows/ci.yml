@@ -41,3 +41,7 @@ jobs:
       - name: Test
         working-directory: java
         run: ./gradlew test --console=plain
+
+      # Docs and Dockerfiles are allowed to claim Java 25 only; CI pins it.
+      - name: Docs claim Java 25
+        run: bash .github/scripts/check-java-version-docs.sh
