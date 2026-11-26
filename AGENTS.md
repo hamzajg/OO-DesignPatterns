@@ -9,7 +9,7 @@ patterns (Strategy, Observer, Decorator, Factory) implemented side by side
 in **C# on .NET 10** (`CSharp/`) and **Java on Gradle** (`java/`), so the
 two languages can be read against each other. Each pattern is one file,
 kept to the minimum the idea needs, pinned by tests.
-Stack: C# `net10.0` (xUnit), Java 17 toolchain targeting source 8 (JUnit),
+Stack: C# `net10.0` (xUnit), Java 25 toolchain (JUnit),
 Gradle wrapper in `java/`.
 
 ## Commands
@@ -23,7 +23,7 @@ Verified 2026-11-13 against CI (`.github/workflows/ci.yml`) and README.
 | Java tests | `cd java && ./gradlew test --console=plain` |
 | Java demo | `cd java && ./gradlew run` (check `build.gradle` for the run task) |
 
-Requires: .NET 10 SDK (CI `10.0.x`), JDK 17 for the Java module.
+Requires: .NET 10 SDK (CI `10.0.x`), JDK 25 for the Java module.
 
 ## Architecture
 
@@ -62,8 +62,8 @@ java/
 
 - **Default branch is `master`, not `main`.**
 - README says ".NET 8 SDK" but csproj/CI are `net10.0` — trust the csproj.
-- Java module source level is 8 while the toolchain is JDK 17 — don't use
-  post-8 language features in `java/`.
+- The Java module compiles with the JDK 25 toolchain, so Java 25 language
+  features are available in `java/`.
 - `CSharp/obj` may contain stale net8.0 artifacts — the target is net10.0.
 - Two languages in one repo: scope CI/build commands to the right module
   (`CSharp/CSharp.sln` vs `java/`).
