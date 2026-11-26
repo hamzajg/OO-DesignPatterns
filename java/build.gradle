@@ -5,7 +5,11 @@ plugins {
 group 'com.hamzajg.examples'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
 
 repositories {
     mavenCentral()
