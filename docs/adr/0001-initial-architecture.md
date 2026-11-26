@@ -20,9 +20,9 @@ side-by-side reading.
    example must be readable in one screen — KISS as a teaching constraint.
 3. **Tests as the spec.** One test class per pattern per language. The
    suite pins behaviour so refactors can't silently change semantics.
-4. **Java targets source level 8 on JDK 17.** Broad language compatibility
-   for the examples while running on a modern toolchain. Rationale: the
-   examples should look like textbook Java, not showcase new features.
+4. **Java 25 toolchain.** The Java module compiles and runs on JDK 25,
+   matching the rest of the fleet. Rationale: the examples should look like
+   textbook Java, not showcase new features, which the source style keeps.
 5. **net10.0 for C# (README still says 8).** Retargeted during the fleet
    SDK sweep; csproj + CI (`10.0.x`) are the truth, README is stale.
 6. **No frameworks.** No DI, no logging, no web — plain console demo +

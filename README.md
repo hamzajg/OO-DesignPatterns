@@ -31,7 +31,7 @@ languages can be read side by side.
 ## Requirements
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- JDK 17 (the Java module targets source level 8)
+- JDK 25
 
 ## Run the demo
 
@@ -104,7 +104,7 @@ java/
 
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs two jobs for every
 push and pull request to `master`: `dotnet test CSharp/CSharp.sln
---configuration Release` on .NET 8, and `./gradlew test` in `java/` on JDK 17.
+--configuration Release` on .NET 8, and `./gradlew test` in `java/` on JDK 25.
 
 ## License
 
